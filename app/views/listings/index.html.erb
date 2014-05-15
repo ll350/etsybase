@@ -1,0 +1,23 @@
+
+<div class="container">
+<div class="row">
+  <% @listings.each do |listing| %>
+    <div class="col-md-3">
+		<%= image_tag listing.image.url(:medium) %><br/>
+        <%= listing.name %><br/>
+        <%= listing.description %><br/>
+        <%= listing.price %><br/>
+        <%= link_to 'Show', listing, class: 'btn btn-link' %><br/>
+        <%= link_to 'Edit', edit_listing_path(listing), class: 'btn btn-link' %><br/>
+        <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-link' %>
+      </div><!--/.col-md-3 -->
+    <% end %>
+</div><!--/.row -->
+</div><!--/.container -->
+
+<h1>Listing listings</h1>
+
+
+<br>
+
+<%= link_to 'New Listing', new_listing_path, class: 'btn btn-link' %>
