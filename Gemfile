@@ -41,4 +41,4 @@ gem 'spring',        group: :development
 # added by Leo Lanzo 2014-05-13
 gem 'bootstrap-sass', '~> 3.1.1'
 gem "paperclip", "~> 4.1"
-
+gem "devise"
